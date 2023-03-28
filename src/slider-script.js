@@ -1,4 +1,5 @@
 (() => {
+  //Slider Function
   const sliderFunc = () => {
     const arrowLeft = document.querySelector(".arrow-left");
     const arrowRight = document.querySelector(".arrow-right");
@@ -23,8 +24,10 @@
       }
     };
 
+    //Slider Interval
     setInterval(coreFunc, seconds);
 
+    //Event Listeners
     arrowLeft.addEventListener("click", () => {
       if (number === 1) {
         number += 2;
@@ -66,6 +69,7 @@
     });
   };
 
+  //Scroll Fixed Header
   const fixedHeader = () => {
     const header = document.querySelector(".header-wrapper");
 
@@ -78,6 +82,24 @@
     });
   };
 
+  //Open Menu Mobile
+  const openMenu = () => {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const sectionsOptions = document.querySelector(".sections-options");
+    mobileMenu.addEventListener("click", () => {
+      sectionsOptions.style = "left: 0";
+      window.screenTop = 0;
+      document.querySelector("body").style = "overflow: hidden;";
+      document.querySelector("body").style = "";
+    });
+
+    document.querySelector("main").addEventListener("click", (e) => {
+      sectionsOptions.style = "left: -180%";
+    });
+  };
+
+  //Call Functions
+  openMenu();
   sliderFunc();
   fixedHeader();
 })();
