@@ -24,47 +24,63 @@
           <img src="/img/assets/mnf-logo.svg" alt="Logo MNF">
         </a>
 
-        <form action="">
-          <label for="search-bar">Busca por camisas</label>
-          <input name="search-bar" type="text" placeholder="O que você está procurando?">
+        <div class="flex-header">
+          <div class="mobile-menu">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16667 18.75C3.87153 18.75 3.62396 18.65 3.42396 18.45C3.22396 18.25 3.12431 18.0028 3.125 17.7083C3.125 17.4132 3.225 17.1656 3.425 16.9656C3.625 16.7656 3.87223 16.666 4.16667 16.6667H20.8333C21.1285 16.6667 21.376 16.7667 21.576 16.9667C21.776 17.1667 21.8757 17.4139 21.875 17.7083C21.875 18.0035 21.775 18.251 21.575 18.451C21.375 18.651 21.1278 18.7507 20.8333 18.75H4.16667ZM4.16667 13.5417C3.87153 13.5417 3.62396 13.4417 3.42396 13.2417C3.22396 13.0417 3.12431 12.7944 3.125 12.5C3.125 12.2049 3.225 11.9573 3.425 11.7573C3.625 11.5573 3.87223 11.4576 4.16667 11.4583H20.8333C21.1285 11.4583 21.376 11.5583 21.576 11.7583C21.776 11.9583 21.8757 12.2056 21.875 12.5C21.875 12.7951 21.775 13.0427 21.575 13.2427C21.375 13.4427 21.1278 13.5424 20.8333 13.5417H4.16667ZM4.16667 8.33334C3.87153 8.33334 3.62396 8.23334 3.42396 8.03334C3.22396 7.83334 3.12431 7.58611 3.125 7.29167C3.125 6.99653 3.225 6.74896 3.425 6.54896C3.625 6.34896 3.87223 6.24931 4.16667 6.25H20.8333C21.1285 6.25 21.376 6.35 21.576 6.55C21.776 6.75 21.8757 6.99723 21.875 7.29167C21.875 7.58681 21.775 7.83438 21.575 8.03438C21.375 8.23438 21.1278 8.33403 20.8333 8.33334H4.16667Z" fill="#F8F8F8" />
+            </svg>
 
-          <button><img src="/img/assets/search-icon.svg" alt="ícone de busca"></button>
-        </form>
+          </div>
 
-        <nav class="menu-nav">
-          <ul class="options-list">
-            <li class="options-item">
-              <a href="#">
-                <img src="/img/assets/favorite-icon.svg" alt="favorite icon">
-                Meus favoritos</a>
-            </li>
-            <li class="options-item">
-              <a href="#">
-                <img src="/img/assets/user-icon.svg" alt="ícone de usuário">
-                Minha conta</a>
-            </li>
-            <li class="options-item">
-              <div class="cart-qtd">
-                <p>5</p>
-              </div>
-              <a href="#">
-                <img src="/img/assets/cart-icon.svg" alt="carrinho ícone">
-                Meu carrinho</a>
-            </li>
-          </ul>
-        </nav>
+          <form action="">
+            <label for="search-bar">Busca por camisas</label>
+            <input name="search-bar" type="text" placeholder="O que você está procurando?">
+
+            <button><img src="/img/assets/search-icon.svg" alt="ícone de busca"></button>
+          </form>
+
+          <nav class="menu-nav">
+            <ul class="options-list">
+              <li class="options-item">
+                <a href="#">
+                  <img src="/img/assets/favorite-icon.svg" alt="favorite icon"><span>
+                    Meus favoritos</span></a>
+              </li>
+              <li class="options-item">
+                <a href="#">
+                  <img src="/img/assets/user-icon.svg" alt="ícone de usuário">
+                  <span>Minha conta</span>
+                </a>
+              </li>
+              <li class="options-item">
+                <div class="cart-qtd">
+                  <p>5</p>
+                </div>
+                <a href="#">
+                  <img src="/img/assets/cart-icon.svg" alt="carrinho ícone">
+                  <span>Meu carrinho</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
 
-  <nav class="sections-options">
-    <a href="#">Início</a>
-    <a href="#">Em alta</a>
-    <a href="#">
-      Animes
-      <img src="/img/assets/expand-icon.svg" alt="ver mais">
-    </a>
-    <a href="#">Lançamentos</a>
+  <nav class=" section-wrapper container">
+    <div class=" sections-options show">
+      <a href="#">Início</a>
+      <a href="#">Em alta</a>
+      <a href="#">
+        Animes
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.825 7.15833L10 10.975L6.175 7.15833L5 8.33333L10 13.3333L15 8.33333L13.825 7.15833Z" fill="#111111" />
+        </svg>
+
+      </a>
+      <a href="#">Lançamentos</a>
+    </div>
   </nav>
 
   <section class="banner-section">
@@ -86,73 +102,80 @@
       <li class="card-item">
         <img src="/img/mockups/471-camiseta-branca-chainsaw-man-denji1-6a916c829aa8435ea616751964782286-480-0.webp" alt="mockup item">
         <div class="card-info">
+          <a href="#" class="favorite-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="#000" />
+            </svg>
+          </a>
           <h3>Camisa Gaara Amor - Naruto</h3>
           <p>R$ 79,90</p>
+          <span>ou pague no PIX com <b>5%</b> de desconto</span>
           <div class="card-buttons">
-
-            <a href="#" class="btn">
-              Favoritar
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="white" />
-              </svg>
-
-
-              <a href="#" class="btn">Comprar</a>
-
+            <a href="#" class="btn">Comprar</a>
           </div>
         </div>
       </li>
       <li class="card-item">
         <img src="/img/mockups/471-camiseta-branca-chainsaw-man-denji1-6a916c829aa8435ea616751964782286-480-0.webp" alt="mockup item">
         <div class="card-info">
+          <a href="#" class="favorite-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="#000" />
+            </svg>
+          </a>
           <h3>Camisa Gaara Amor - Naruto</h3>
           <p>R$ 79,90</p>
+          <span>ou pague no PIX com <b>5%</b> de desconto</span>
           <div class="card-buttons">
-
-            <a href="#" class="btn">
-              Favoritar
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="white" />
-              </svg>
-
-
-              <a href="#" class="btn">Comprar</a>
-
+            <a href="#" class="btn">Comprar</a>
           </div>
         </div>
       </li>
       <li class="card-item">
         <img src="/img/mockups/471-camiseta-branca-chainsaw-man-denji1-6a916c829aa8435ea616751964782286-480-0.webp" alt="mockup item">
         <div class="card-info">
+          <a href="#" class="favorite-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="#000" />
+            </svg>
+          </a>
           <h3>Camisa Gaara Amor - Naruto</h3>
           <p>R$ 79,90</p>
+          <span>ou pague no PIX com <b>5%</b> de desconto</span>
           <div class="card-buttons">
-            <a href="#" class="btn">
-              Favoritar
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="white" />
-              </svg>
-              <a href="#" class="btn">Comprar</a>
-
+            <a href="#" class="btn">Comprar</a>
           </div>
         </div>
       </li>
       <li class="card-item">
         <img src="/img/mockups/471-camiseta-branca-chainsaw-man-denji1-6a916c829aa8435ea616751964782286-480-0.webp" alt="mockup item">
         <div class="card-info">
+          <a href="#" class="favorite-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="#000" />
+            </svg>
+          </a>
           <h3>Camisa Gaara Amor - Naruto</h3>
           <p>R$ 79,90</p>
+          <span>ou pague no PIX com <b>5%</b> de desconto</span>
           <div class="card-buttons">
-
-            <a href="#" class="btn">
-              Favoritar
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="white" />
-              </svg>
-
-
-              <a href="#" class="btn">Comprar</a>
-
+            <a href="#" class="btn">Comprar</a>
+          </div>
+        </div>
+      </li>
+      <li class="card-item">
+        <img src="/img/mockups/471-camiseta-branca-chainsaw-man-denji1-6a916c829aa8435ea616751964782286-480-0.webp" alt="mockup item">
+        <div class="card-info">
+          <a href="#" class="favorite-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" fill="#000" />
+            </svg>
+          </a>
+          <h3>Camisa Gaara Amor - Naruto</h3>
+          <p>R$ 79,90</p>
+          <span>ou pague no PIX com <b>5%</b> de desconto</span>
+          <div class="card-buttons">
+            <a href="#" class="btn">Comprar</a>
           </div>
         </div>
       </li>

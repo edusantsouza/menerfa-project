@@ -3,6 +3,8 @@
 :root{
   --white: #FFF;
   --black: #252525;
+  --purple: #707BB6;
+  --red: #e41e04;
   font-size: 62.5%;
 }
 
@@ -16,6 +18,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+  position: relative;
 }
 
 /* Header */
@@ -24,7 +27,10 @@ header {
 font-size: 1.4rem;
 color: var(--white);
 background-color: var(--white);
+
 }
+
+
 
 .top-advise{
   margin: 0 auto;
@@ -42,18 +48,43 @@ background-color: var(--white);
   font-weight: 600;
 }
 
+.logo-mnf {
+  max-width: 54.5rem;
+  margin-left: 1rem;
+  flex-basis: 38%;
+}
+
+.logo-mnf img {
+  width: 10rem;
+  height: 4rem;
+}
+
+.mobile-menu{
+  display: none;
+  cursor: pointer;
+}
+
 .header-wrapper{
 background-color: var(--black);
+
 }
 
 .header-content {
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding-block: 1.6rem;
   padding-inline: 10px ;
   align-items: center;
 }
 
-.header-content form {
+.flex-header {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.flex-header form {
   display: flex;
   max-width: 60rem;
   flex-basis: 100%;
@@ -88,15 +119,6 @@ background-color: var(--black);
   top: .7rem;
 }
 
-.logo-mnf {
-  width: 27.5rem;
-}
-
-.logo-mnf img {
-  width: 10rem;
-  height: 4rem;
-}
-
 .options-list{
   display: flex;
   gap: .5rem;
@@ -116,11 +138,14 @@ background-color: var(--black);
   margin-top: -5px;
 }
 
+.options-item a:hover{
+  filter: opacity(80%);
+} 
+
 .cart-qtd{
   width: 1.4rem;
   height: 1.4rem;
   background-color: #FFF;
-   /* margin-top: 2rem; */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -143,11 +168,63 @@ background-color: var(--black);
   font-weight: 400;
   text-align: center;
   gap: .5rem;
+  transition: .3s all;
 }
 
 .options-item a img {
   width: 1.8rem;
   height: 1.8rem;
+}
+
+@media(max-width: 720px){
+  .header-content {
+    padding-bottom: 3rem;
+    flex-direction: column;
+    width: 820px;
+    max-width: 100%;
+    gap:2rem;
+  }
+
+  .flex-header {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-basis: 100%;
+    gap: 2rem;
+  }
+
+  .options-item:nth-child(2), .options-list li a span{
+    display: none;
+  }
+
+  .options-item {
+    flex-basis: 100% ;
+  }
+
+  .options-list li a img {
+    min-height: 2.8rem;
+    min-width: 2.8rem;
+  }
+
+  .options-list li:nth-child(3) a {
+    flex-basis: 100% ;
+  }
+
+  .options-list li:nth-child(3) a img {
+    flex-shrink: 0;
+  }
+
+  .mobile-menu{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .mobile-menu svg {
+    
+    width: 4.6rem;
+    height: 4.6rem;
+  }
+
 }
 
 /* Sections */ 
@@ -158,10 +235,14 @@ background-color: var(--black);
   gap: 8rem;
   padding-block: 1rem;
   border-bottom: 1px solid #00000027;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.sections-options a:has(img) {
+.sections-options a:has(svg) {
   display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 .sections-options a {
@@ -169,11 +250,44 @@ background-color: var(--black);
   color: var(--black);
   font-size: 1.4rem;
   padding:1rem ;
-  transition:cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: .3s all;
 }
 
 .sections-options a:hover {
   filter: opacity(80%);
+}
+
+@media(max-width: 720px){
+
+  .show {
+    display: none ;
+  }
+  .sections-options {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 10rem;
+    bottom: 0;
+    z-index: 150;
+    background-color: var(--black);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5rem 4rem;
+    border-bottom: none;
+    gap: 0;
+  }
+
+  .sections-options a {
+    color: var(--white);
+    font-size: 2.4rem;
+  }
+
+  .sections-options a svg path {
+    fill: var(--white);
+  }
+
+
 }
 
 /* Banner */ 
@@ -224,6 +338,7 @@ background-color: var(--black);
 
 
 /* Products */
+
 .products-section {
 display: block;
 flex-direction: column;
@@ -255,16 +370,18 @@ margin: 0 auto;
 .card-item{
   height: 56rem;
   width: 28.3rem;
-  background-color: var(--black);
+  /* background: rgb(17,17,18); */
+  background: linear-gradient(180deg, rgba(17, 17, 18, 0.233) 44%, rgba(0, 0, 0, 0.76) 64%, rgba(3, 0, 0, 0.712) 100%);
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   cursor: pointer;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.466);
   transition: .6s all;
 }
 
 .card-item:hover {
   transform: scale(1.01);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.233);
+
 }
 
 .products-section ul li img {
@@ -281,7 +398,7 @@ display: block;
   gap: 1.4rem;
   padding: 1.2rem;
   padding-block: 1.8rem;
-}
+  position: relative;}
 
 .card-info h3 {
   font-weight: 400;
@@ -292,38 +409,68 @@ display: block;
 .card-info p {
   font-size: 2.4rem;
   line-height: 1.4rem;
-  margin-bottom: 2rem;
   font-weight: 700;
 }
 
-.card-buttons{
+.favorite-icon{
   display: flex;
-  justify-content: space-evenly;
-  gap: 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1.6rem;
+  right: 1.6rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  padding: .4rem;
+  background-color: var(--white);
+}
+
+.favorite-icon svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  transition: 1s all;
+}
+
+.favorite-icon svg:hover path {
+  fill: var(--red);
+}
+
+.favorite-icon:hover{
+  background-color: #fffffff3;
 }
 
 .btn{
-  padding: 1rem;
-  width: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border: 1px solid #fff;
-  border-color: var(--white);
+  display: block;
   border-radius: 1rem;
   transition: .4s all;
+  color: var(--black);
+  background-color: var(--white);
+  margin: 1rem auto 0;
+  width: 15rem;
+  padding: 1rem 0;
+  font-size: 1.2rem;
 }
 
 .btn:hover{
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--purple);
+  color: var(--white);
 }
 
 .btn:hover path {
-  fill: black;
+  fill: rgb(255, 255, 255);
 
 }
 
-.card-buttons a{
-  color: var(--white)
+@media(max-width: 950px){
+  .products-section ul {
+    justify-content: space-between;
+    max-width: 80%;
+  }
+}
+
+@media(max-width: 800px) {
+  .products-section ul {
+    justify-content: center;
+    max-width: 80%;
+  }
 }
