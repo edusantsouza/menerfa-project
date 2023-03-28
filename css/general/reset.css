@@ -1,0 +1,16 @@
+* {
+	box-sizing: border-box;
+  padding: 0px;
+	margin: 0px;
+}
+
+a, li {
+	list-style: none;
+	text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+

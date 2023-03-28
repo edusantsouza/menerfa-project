@@ -1,0 +1,283 @@
+/*Geral*/
+
+:root{
+  --white: #FFF;
+  --black: #252525;
+  font-size: 62.5%;
+}
+
+.container {
+	display: flex;
+	max-width: 1420px;
+	padding-inline: 10px ;
+	margin: 0 auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* Header */
+
+header {
+font-size: 1.4rem;
+color: var(--white);
+background-color: var(--white);
+}
+
+.top-advise{
+  margin: 0 auto;
+  padding-block: .5rem
+}
+
+.top-advise p {
+  margin: 0 auto;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 1rem;
+}
+
+.top-advise p span {
+  font-weight: 600;
+}
+
+.header-wrapper{
+background-color: var(--black);
+}
+
+.header-content {
+  justify-content: space-around;
+  padding-block: 1.6rem;
+  align-items: center;
+}
+
+.header-content form {
+  display: flex;
+  max-width: 60rem;
+  flex-basis: 100%;
+  position: relative;
+}
+
+.header-content form input {
+	padding: 1rem;
+	border: none;
+  flex: 1;
+  border-radius: .7rem;
+	background: var(--white);
+	font-size: 1.2rem;
+	font-style: italic;
+	font-family: 'Poppins', sans-serif;
+}
+
+.header-content form input:focus{
+  outline: none;
+}
+
+.header-content form label {
+	display: none;
+}
+
+.header-content button {
+	background: none;
+	border: none;
+	cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: .7rem;
+}
+
+.logo-mnf {
+  width: 27.5rem;
+}
+
+.logo-mnf img {
+  width: 10rem;
+  height: 4rem;
+}
+
+.options-list{
+  display: flex;
+  gap: .5rem;
+  font-size: 1rem;
+  font-weight: thin;
+  align-items: center;
+}
+
+.options-item:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.options-item:nth-child(3) a {
+  padding-top: 0px;
+  margin-top: -5px;
+}
+
+.cart-qtd{
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #FFF;
+   /* margin-top: 2rem; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-qtd p {
+  color: var(--black);
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.options-item a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--white);
+  padding: 1rem;
+  font-weight: 400;
+  text-align: center;
+  gap: .5rem;
+}
+
+.options-item a img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Sections */ 
+
+.sections-options {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid #00000027;
+}
+
+.sections-options a:has(img) {
+  display: flex;
+}
+
+.sections-options a {
+  display: block;
+  color: var(--black);
+  font-size: 1.4rem;
+  padding:1rem ;
+  transition:cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.sections-options a:hover {
+  filter: opacity(80%);
+}
+
+/* Banner */ 
+
+.banner-section{
+  position: relative;
+  height: 34.5rem;
+} 
+
+.banner-section::after {
+  content: '';
+  display: table;
+  max-width: 100%;
+}
+
+
+.slider {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.slider li {
+  list-style: none;
+  position: absolute;
+}
+
+.slider img {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+}
+
+.slider input {
+  display: none;
+}
+
+.slider label {
+  background-color: var(--white);
+  bottom: 1rem;
+  cursor: pointer;
+  display: block;
+  height: .9rem;
+  position: absolute;
+  width: .9rem;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.slider li:nth-child(1) label {
+  bottom: .5rem;
+  left: 53%;
+}
+
+.slider li:nth-child(2) label {
+  bottom: .5rem;
+  left: 50%;
+}
+
+.slider li:nth-child(3) label {
+  bottom: .5rem;
+  left: 47%;
+}
+
+.slider li input:checked ~ label {
+  background-color: rgb(59, 56, 59);
+}
+
+.slider img {
+  opacity: 0;
+}
+
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.arrow img {
+  width: 5.2rem;
+}
+
+.arrow{
+  position: absolute;
+  z-index: 111;
+  cursor: pointer;
+  filter: opacity(30%);
+  transition: .5s all;
+}
+
+.arrow:hover{
+  filter: opacity(60%);
+}
+
+.arrow-left{
+  left: 0;
+  margin-left: 1rem;
+  bottom: calc(50% - 1.5rem);
+}
+
+.arrow-right{
+  right: 0;
+  margin-right: 1rem;
+  bottom: calc(50% - 1.5rem);
+}

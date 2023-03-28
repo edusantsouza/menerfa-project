@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menerfa - Camisas de Anime com minimalismo e personalidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/general/reset.css">
+  <link rel="stylesheet" href="css/home/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="top-advise container">
+      <p><span>Frete grátis</span> nas compras acima de <span>R$150</span></p>
+    </div>
+    <div class="header-wrapper">
+      <div class="header-content container">
+        <a href="index.html" class="logo-mnf">
+          <img src="/img/assets/mnf-logo.svg" alt="Logo MNF">
+        </a>
+
+        <form action="">
+          <label for="search-bar">Busca por camisas</label>
+          <input name="search-bar" type="text" placeholder="O que você está procurando?">
+
+          <button><img src="/img/assets/search-icon.svg" alt="ícone de busca"></button>
+        </form>
+
+        <nav class="menu-nav">
+          <ul class="options-list">
+            <li class="options-item">
+              <a href="#">
+                <img src="/img/assets/favorite-icon.svg" alt="favorite icon">
+                Meus favoritos</a>
+            </li>
+            <li class="options-item">
+              <a href="#">
+                <img src="/img/assets/user-icon.svg" alt="ícone de usuário">
+                Minha conta</a>
+            </li>
+            <li class="options-item">
+              <div class="cart-qtd">
+                <p>5</p>
+              </div>
+              <a href="#">
+                <img src="/img/assets/cart-icon.svg" alt="carrinho ícone">
+                Meu carrinho</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sections-options">
+    <a href="#">Início</a>
+    <a href="#">Em alta</a>
+    <a href="#">
+      Animes
+      <img src="/img/assets/expand-icon.svg" alt="ver mais">
+    </a>
+    <a href="#">Lançamentos</a>
+  </nav>
+
+  <section class="banner-section container">
+    <div class="arrow arrow-left">
+      <img src="/img/assets/arrow-previous.svg" alt="arrow previous">
+    </div>
+
+    <div class="arrow arrow-right">
+      <img src="/img/assets/arrow-next.svg" alt="arrow previous">
+    </div>
+    <ul class="slider">
+      <li>
+        <input type="radio" id="slide1" name="slide" checked>
+        <label for="slide1"></label>
+        <img src="/img/banners/banner-1.png" alt="banner image 1">
+      </li>
+      <li>
+        <input type="radio" id="slide2" name="slide">
+        <label for="slide2"></label>
+        <img src="/img/banners/banner-2.png" alt="banner image 2">
+      </li>
+      <li>
+        <input type="radio" id="slide3" name="slide">
+        <label for="slide3"></label>
+        <img src="/img/banners/banner-3.png" alt="banner image 3">
+      </li>
+    </ul>
+  </section>
+
+</body>
+<script src="/src/slider-script.js"></script>
+
+</html>
