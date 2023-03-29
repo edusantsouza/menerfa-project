@@ -72,14 +72,28 @@
   //Scroll Fixed Header
   const fixedHeader = () => {
     const header = document.querySelector(".header-wrapper");
+    const headerContent = document.querySelector(".header-content");
+    const logoMobile = document.querySelector(".logo-mnf");
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
         header.style = "position: fixed; width: 100%; z-index: 150; top: 0;";
+        if (window.outerWidth < 740) {
+          logoMobile.style = "display: none ;";
+          headerContent.style = "padding: 16px 10px";
+        } else {
+          logoMobile.style = "display: block ;";
+        }
       } else if (window.scrollY < 100) {
         header.style = "position: inherit";
+        logoMobile.style = "display: block ;";
       }
+      console.log(window.screenX);
     });
+
+    // window.addEventListener("resize", () => {
+    //   console.log(window.outerWidth);
+    // });
   };
 
   //Open Menu Mobile
