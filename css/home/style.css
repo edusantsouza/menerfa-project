@@ -68,65 +68,83 @@ background-color: var(--white);
 
 .header-wrapper{
 background-color: var(--black);
-
 }
 
 .header-content {
-  /* justify-content: space-between; */
   padding-block: 1.6rem;
   padding-inline: 10px ;
   align-items: center;
 }
 
 .flex-header {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-basis: 100%;
+  gap:5rem;
 }
 
-.flex-header form {
+.search {
+  width: 100%;
+}
+
+.search-icon {
+  margin-left: 90% ;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.flex-header .search .search-bar {
   display: flex;
-  max-width: 60rem;
-  flex-basis: 100%;
   position: relative;
 }
 
-.header-content form input {
+.header-content .flex-header .search .search-bar input {
 	padding: 1rem;
 	border: none;
-  flex: 1;
   border-radius: .7rem;
 	background: var(--white);
 	font-size: 1.2rem;
 	font-style: italic;
 	font-family: 'Poppins', sans-serif;
+  flex-basis: 92%;
 }
 
-.header-content form input:focus{
+.header-content  .flex-header .search .search-bar input:focus{
   outline: none;
 }
 
-.header-content form label {
+.header-content  .flex-header .search .search-bar label {
 	display: none;
 }
 
-.header-content button {
+.header-content  .flex-header .search  .search-bar button {
 	background: none;
 	border: none;
 	cursor: pointer;
   position: absolute;
-  right: 1rem;
+  right: 7rem;
   top: .7rem;
+}
+
+.menu-nav{
+  max-width: max-content;
 }
 
 .options-list{
   display: flex;
-  gap: .5rem;
   font-size: 1rem;
-  font-weight: thin;
   align-items: center;
+}
+
+.options-item a span{
+  width: 7.5rem;
 }
 
 .options-item:nth-child(3) {
@@ -145,13 +163,14 @@ background-color: var(--black);
 } 
 
 .cart-qtd{
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.8rem;
+  height: 1.8rem;
   background-color: #FFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 1rem;
 }
 
 .cart-qtd p {
@@ -171,6 +190,7 @@ background-color: var(--black);
   text-align: center;
   gap: .5rem;
   transition: .3s all;
+  width: 100%;
 }
 
 .options-item a img {
@@ -183,7 +203,37 @@ background-color: var(--black);
   display: none;
 }
 
+@media(max-width: 1000px){
+  .header-content  .flex-header .search  .search-bar input {
+flex-basis: 100%;
+  }
+
+  .header-content  .flex-header .search  .search-bar button {
+    right: 1.2rem;
+  }
+
+  .logo-mnf {
+    margin-left: 1rem;
+    flex-basis: 30%;
+  }
+
+  
+.options-item a span{
+  width: 100%;
+}
+
+.cart-qtd {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: .5rem;
+}
+  
+
+}
+
 @media(max-width: 720px){
+ 
+
   .header-content {
     padding-bottom: 3rem;
     flex-direction: column;
@@ -226,9 +276,50 @@ background-color: var(--black);
     height: 4.6rem;
   }
 
+ 
+  .flex-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1.4rem;
+  }
+  
+  .search {
+    width: 100%;
+  }
+  
+  .search-icon {
+    margin-left: 90% ;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .search-icon svg {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .flex-header .search .search-bar {
+    display: none;
+    position: relative;
+  }
+
+  .cart-qtd {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0;
+  }
+
 }
 
 @media(max-width: 400px){
+
+  .search .search-bar {
+    display: none;
+  }
+  
 
   .mobile-menu svg {
     width: 4rem;
@@ -247,7 +338,7 @@ background-color: var(--black);
     width: 1.5rem;
   }
 
-    .flex-header form input {
+    .flex-header .search input {
       height: 3rem;
     }
 
@@ -324,7 +415,8 @@ background-color: var(--black);
 
 .options {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 4rem;
   width: 100%;
 }
 
@@ -482,6 +574,7 @@ background-color: var(--black);
 /* Products */
 
 .products-section {
+width: 100% ;
 flex-direction: column;
 gap: 0;
 align-items: center;
@@ -496,12 +589,12 @@ padding-block: 3.4rem;
 }
 
 .products-section ul {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 4rem;
   row-gap: 5rem;
   flex-wrap: wrap;
-  margin: 0;
 } 
 
 .products-section ul li  {
@@ -510,26 +603,29 @@ padding-block: 3.4rem;
 }
 
 .card-item{
-  width: 28.3rem;
-  /* background: rgb(17,17,18); */
-  background: linear-gradient(180deg, rgba(17, 17, 18, 0.233) 44%, rgba(0, 0, 0, 0.76) 64%, rgba(3, 0, 0, 0.712) 100%);
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
+  border: 1px solid var(--black) ;
+  border-radius: 5px;
   cursor: pointer;
-  transition: .6s all;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .5s;
+}
+
+.card-image {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('/img/mockups/471-camiseta-branca-chainsaw-man-denji1-6a916c829aa8435ea616751964782286-480-0.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+	padding: 12rem 0rem;
+  margin: 0 auto;
 }
 
 .card-item:hover {
-  transform: scale(1.01);
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.233);
-
-}
-
-.products-section ul li img {
-  border-top-right-radius: 7px;
-  border-top-left-radius: 1rem;
-  max-width: 100%;
-display: block;
+  box-shadow: 1rem 1rem  #cc8708;
 }
 
 .card-info{
@@ -539,9 +635,11 @@ display: block;
   gap: 1.4rem;
   padding: 1.2rem;
   padding-block: 1.8rem;
-  position: relative;}
+  position: relative;
+}
 
 .card-info h3 {
+  color: var(--black);
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2rem;
@@ -551,6 +649,11 @@ display: block;
   font-size: 2.4rem;
   line-height: 1.4rem;
   font-weight: 700;
+  color: var(--black);
+}
+
+.card-info span {
+  color: var(--black);
 }
 
 .favorite-icon{
@@ -560,7 +663,8 @@ display: block;
   position: absolute;
   top: -1.6rem;
   right: 1.6rem;
-  border: 1px solid var(--white);
+  /* border: 1px solid var(--black); */
+  box-shadow: 1px 1px 10px var(--black);
   border-radius: 50%;
   padding: .4rem;
   background-color: var(--white);
@@ -584,8 +688,8 @@ display: block;
   display: block;
   border-radius: 1rem;
   transition: .4s all;
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--black);
   margin: 1rem auto 0;
   padding: 1rem 0;
   font-size: 1.2rem;
