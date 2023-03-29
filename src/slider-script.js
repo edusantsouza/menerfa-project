@@ -71,13 +71,15 @@
 
   //Scroll Fixed Header
   const fixedHeader = () => {
-    const header = document.querySelector(".header-wrapper");
+    const header = document.querySelector("header");
+    const headerWrapper = document.querySelector(".header-wrapper");
     const headerContent = document.querySelector(".header-content");
     const logoMobile = document.querySelector(".logo-mnf");
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
-        header.style = "position: fixed; width: 100%; z-index: 150; top: 0;";
+        headerWrapper.style =
+          "position: fixed; width: 100%; z-index: 150; top: 0; box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.3);";
         if (window.outerWidth < 740) {
           logoMobile.style = "display: none ;";
           headerContent.style = "padding: 16px 10px";
@@ -85,15 +87,10 @@
           logoMobile.style = "display: block ;";
         }
       } else if (window.scrollY < 100) {
-        header.style = "position: inherit";
         logoMobile.style = "display: block ;";
+        headerWrapper.style = "box-shadow: none;";
       }
-      console.log(window.screenX);
     });
-
-    // window.addEventListener("resize", () => {
-    //   console.log(window.outerWidth);
-    // });
   };
 
   //Open Menu Mobile

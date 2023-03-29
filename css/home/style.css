@@ -27,7 +27,6 @@ header {
 font-size: 1.4rem;
 color: var(--white);
 background-color: var(--white);
-
 }
 
 .top-advise{
@@ -68,6 +67,7 @@ background-color: var(--white);
 
 .header-wrapper{
 background-color: var(--black);
+
 }
 
 .header-content {
@@ -616,7 +616,6 @@ padding-block: 3.4rem;
 
 .btn:hover path {
   fill: var(--white);
-
 }
 
 @media(max-width: 950px){
