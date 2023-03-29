@@ -52,6 +52,10 @@ background-color: var(--white);
   flex-basis: 38%;
 }
 
+.logo-mnf-mobile {
+ display: none;
+}
+
 .logo-mnf img {
   width: 10rem;
   height: 4rem;
@@ -191,16 +195,11 @@ background-color: var(--black);
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    flex-basis: 100%;
     gap: 2rem;
   }
 
   .options-item:nth-child(2), .options-list li a span{
     display: none;
-  }
-
-  .options-item {
-    flex-basis: 100% ;
   }
 
   .options-list li a img {
@@ -229,8 +228,8 @@ background-color: var(--black);
 
 }
 
-
 @media(max-width: 400px){
+
   .mobile-menu svg {
     width: 4rem;
   }
@@ -257,22 +256,38 @@ background-color: var(--black);
   }
 
   .mobile-nav {
-    height: 4rem;
-    width: 100%;
+    height: max-content;
+    width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
     position: fixed;
     z-index: 999;
     bottom: 0rem;
-    right: 0rem;
-    left: 0;
-    background-color: #acb0c5;
-    box-shadow: -0px -1px 50px rgba(0, 0, 0, 0.61) ;
+    background-color: #dbdbdb;
+    box-shadow: -0px -1px 100px rgba(0, 0, 0, 0.61) ;
+    border-top: 1px solid #00000015;
   }
 
-  .mobile-nav li span {
+  .mobile-nav ul li a span {
+    display: flex;
+  }
+
+  .mobile-nav ul li:nth-child(2) {
+    display: flex;
+  }
+
+  .mobile-nav ul li:nth-child(3) a span {
+    margin: 0;
+  }
+
+  .cart-qtd {
     display: none;
+  }
+
+  .mobile-nav ul li a {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      color: var(--black);
   }
 
   .mobile-nav li svg path {
@@ -282,6 +297,16 @@ background-color: var(--black);
   .mobile-nav li svg {
     width: 2rem;
     height: 2rem;
+  }
+
+  .options-list {
+    padding-block: .5rem ;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 0;
+
   }
 }
 
@@ -293,8 +318,14 @@ background-color: var(--black);
   gap: 8rem;
   padding-block: 1rem;
   border-bottom: 1px solid #00000027;
-  max-width: 100%;
+  max-width: 90rem;
   margin: 0 auto;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .sections-options a:has(svg) {
@@ -315,38 +346,84 @@ background-color: var(--black);
   filter: opacity(80%);
 }
 
+.sections-options .logo-mnf-mobile, .close-menu, .social-media-sections, .section-wrapper-mobile {
+  display: none;
+}
+
 @media(max-width: 720px){
 
-  .show {
-    display: flex ;
+  .section-wrapper {
+    display: none;
   }
-  .sections-options {
-    position: absolute;
+  .section-wrapper-mobile {
+    display: flex;
+  }
+
+  .section-wrapper-mobile .sections-options {
+    position: fixed;
     left: -180%;
     top: 0;
     right: 40%;
     bottom: 0;
     z-index: 150;
+
     max-width: 100%;
+    padding: 2.8rem 2.4rem 8rem;
+
     background-color: var(--black);
+
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
-    padding: 5rem 4rem;
+    gap: 0rem;
+
+    
     border-bottom: none;
-    gap: 0;
+    transition: .8s all;
   }
 
-  .sections-options a {
+  .section-wrapper-mobile .options {
+    display: block;
+  }
+
+  .section-wrapper-mobile .sections-options .options a {
     color: var(--white);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    padding-left: 0;
+    padding-block: 2rem ;
   }
 
-  .sections-options a svg path {
+  .section-wrapper-mobile .sections-options .options a svg path {
     fill: var(--white);
   }
 
+  .section-wrapper-mobile .social-media-sections {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem
+  }
 
+  .section-wrapper-mobile .logo-mnf-mobile{
+    display: block;
+    width: 10rem;
+    padding-left: 0;
+  }
+
+  .section-wrapper-mobile .close-menu {
+    display: flex;
+    position: absolute;
+    bottom: 5rem;
+    right: 1.6rem;
+    cursor: pointer;
+    opacity: 80%;
+  }
+
+  .section-wrapper-mobile .close-menu svg {
+    width: 2.4rem;
+    height: 2.4rem; 
+  }
+ 
 }
 
 /* Banner */ 
@@ -510,7 +587,6 @@ display: block;
   color: var(--black);
   background-color: var(--white);
   margin: 1rem auto 0;
-  width: 15rem;
   padding: 1rem 0;
   font-size: 1.2rem;
 }
@@ -521,34 +597,69 @@ display: block;
 }
 
 .btn:hover path {
-  fill: rgb(255, 255, 255);
+  fill: var(--white);
 
 }
 
 @media(max-width: 950px){
-  .products-section ul {
-    justify-content: flex-start;
-    max-width: 80%;
+  .card-info p {
+    font-size: 1.6rem;
   }
-}
-
-@media(max-width: 800px) {
-  .products-section ul {
-    justify-content: center;
-    max-width: 80%;
-  }
-}
-
-@media(max-width: 400px){
   .card-item{
-    max-height: 56rem;
-    max-width: 28.3rem;
-    /* background: rgb(17,17,18); */
+    max-height: 100%;
+    max-width: 100%;
     background: linear-gradient(180deg, rgba(17, 17, 18, 0.233) 44%, rgba(0, 0, 0, 0.76) 64%, rgba(3, 0, 0, 0.712) 100%);
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     cursor: pointer;
     transition: .6s all;
+  }
+
+  .products-section ul {
+    justify-content: ;
+    max-width: 80%;
+    gap: 2rem;
+  }
+}
+
+@media(max-width: 815px) {
+  .card-item{
+    max-height: 50%;
+    max-width: 50%;
+    background: linear-gradient(180deg, rgba(17, 17, 18, 0.233) 44%, rgba(0, 0, 0, 0.76) 64%, rgba(3, 0, 0, 0.712) 100%);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    cursor: pointer;
+    transition: .6s all;
+  }
+
+  .products-section ul {
+    justify-content: space-between;
+    max-width: 100%;
+    row-gap: 5rem;
+  }
+}
+
+@media(min-width: 300px) and (max-width: 650px){
+  .card-item{
+    max-height: 100%;
+    max-width: 100%;
+    background: linear-gradient(180deg, rgba(17, 17, 18, 0.74) 44%, rgba(0, 0, 0, 0.966) 64%, rgba(3, 0, 0, 0.712) 100%);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    cursor: pointer;
+    transition: .6s all;
+  }
+
+  .products-section ul {
+    max-width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-info h3 {
+    padding-top: 1rem;
+    font-size: 1rem;
   }
   
 }

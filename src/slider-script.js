@@ -83,23 +83,31 @@
   };
 
   //Open Menu Mobile
-  const openMenu = () => {
+  const Menu = () => {
     const mobileMenu = document.querySelector(".mobile-menu");
-    const sectionsOptions = document.querySelector(".sections-options");
-    mobileMenu.addEventListener("click", () => {
+    const closeBtn = document.querySelector(
+      ".section-wrapper-mobile .close-menu",
+    );
+    const sectionsOptions = document.querySelector(
+      ".section-wrapper-mobile .sections-options",
+    );
+    const openMenu = () => {
       sectionsOptions.style = "left: 0";
       window.screenTop = 0;
-      document.querySelector("body").style = "overflow: hidden;";
-      document.querySelector("body").style = "";
-    });
+      console.log("oi");
+    };
 
-    document.querySelector("main").addEventListener("click", (e) => {
+    const closeMenu = () => {
       sectionsOptions.style = "left: -180%";
-    });
+    };
+
+    mobileMenu.addEventListener("click", openMenu);
+    document.querySelector("main").addEventListener("click", closeMenu);
+    closeBtn.addEventListener("click", closeMenu);
   };
 
   //Call Functions
-  openMenu();
+  Menu();
   sliderFunc();
   fixedHeader();
 })();
