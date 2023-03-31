@@ -1,0 +1,23 @@
+:root{
+  --white: #FFF;
+  --black: #252525;
+  --grey:  #53535381;
+  --purple: #707BB6;
+  --red: #e41e04;
+  --border-card: #6969698c ;
+  font-size: 62.5%;
+}
+
+.container {
+	display: flex;
+	max-width: 1420px;
+	padding-inline: 10px ;
+	margin: 0 auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+

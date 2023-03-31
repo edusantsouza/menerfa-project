@@ -11,10 +11,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/general/reset.css">
-  <link rel="stylesheet" href="css/home/style.css">
+  <link rel="stylesheet" href="css/general/style.css">
+  <link rel="stylesheet" href="css/general/header.css">
+  <link rel="stylesheet" href="css/home/sections.css">
+  <link rel="stylesheet" href="css/home/banner.css">
+  <link rel="stylesheet" href="css/home/products.css">
+  <link rel="stylesheet" href="css/home/newsletter.css">
+  <link rel="stylesheet" href="css/general/footer.css">
 </head>
 
 <body>
+
   <header class="header">
     <div class="top-advise container">
       <p><span>Frete grátis</span> nas compras acima de <span>R$150</span></p>
@@ -79,7 +86,7 @@
                 <div class="cart-qtd">
                   <p>5</p>
                 </div>
-                <a href="#">
+                <a href="#" class="cart-btn">
                   <img src="/img/assets/cart-icon.svg" alt="carrinho ícone">
                   <span>Meu carrinho</span>
                 </a>
@@ -91,7 +98,64 @@
     </div>
   </header>
 
-  <nav class=" section-wrapper ">
+  <div class="cart-screen">
+    <h2>Carrinho</h2>
+
+    <nav class="list-cart">
+      <a href="#" class="list-item-cart">
+        <div class="item-cart-img">
+        </div>
+        <div class="item-cart-info">
+          <h3 class="item-info-name">Camisa Gaara Amor - Naruto </h3>
+          <p class="item-info-description">Camisa <span class="item-info-size">GG</span> <span class="item-info-code">COD: 0554174ND</span></p>
+        </div>
+        <div class="item-cart-qtd">
+          <p>Qtd.</p>
+          <select name="t-shirts" id="t-shirts">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </a>
+      <a href="#" class="list-item-cart">
+        <div class="item-cart-img">
+        </div>
+        <div class="item-cart-info">
+          <h3 class="item-info-name">Camisa Gaara Amor - Naruto </h3>
+          <p class="item-info-description">Camisa <span class="item-info-size">GG</span> <span class="item-info-code">COD: 0554174ND</span></p>
+        </div>
+        <div class="item-cart-qtd">
+          <p>Qtd.</p>
+          <select name="t-shirts" id="t-shirts">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </a>
+    </nav>
+
+    <div class="button-box">
+      <button>Finalizar compra</button>
+    </div>
+  </div>
+
+  <nav class="section-wrapper">
     <div class=" sections-options container">
       <a href="index.html" class="logo-mnf-mobile">
         <img src="/img/assets/mnf-logo.svg" alt="Logo MNF">

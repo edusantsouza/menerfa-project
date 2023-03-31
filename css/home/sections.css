@@ -1,0 +1,115 @@
+
+.sections-options {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid #00000027;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.sections-options a:has(svg) {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.sections-options a {
+  display: block;
+  color: var(--black);
+  font-size: 1.4rem;
+  padding:1rem ;
+  transition: .3s all;
+}
+
+.sections-options a:hover {
+  filter: opacity(80%);
+}
+
+.sections-options .logo-mnf-mobile, .close-menu, .social-media-sections, .section-wrapper-mobile {
+  display: none;
+}
+
+@media(max-width: 720px){
+
+  .section-wrapper {
+    display: none;
+  }
+  .section-wrapper-mobile {
+    display: flex;
+  }
+
+  .section-wrapper-mobile .sections-options {
+    position: fixed;
+    left: -180%;
+    top: 0;
+    right: 40%;
+    bottom: 0;
+    z-index: 150;
+
+    max-width: 100%;
+    padding: 2.8rem 2.4rem 8rem;
+
+    background-color: var(--black);
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0rem;
+
+    
+    border-bottom: none;
+    transition: .8s all;
+  }
+
+  .section-wrapper-mobile .options {
+    display: block;
+  }
+
+  .section-wrapper-mobile .sections-options .options a {
+    color: var(--white);
+    font-size: 1.6rem;
+    padding-left: 0;
+    padding-block: 2rem ;
+  }
+
+  .section-wrapper-mobile .sections-options .options a svg path {
+    fill: var(--white);
+  }
+
+  .section-wrapper-mobile .social-media-sections {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem
+  }
+
+  .section-wrapper-mobile .logo-mnf-mobile{
+    display: block;
+    width: 10rem;
+    padding-left: 0;
+  }
+
+  .section-wrapper-mobile .close-menu {
+    display: flex;
+    position: absolute;
+    bottom: 5rem;
+    right: 1.6rem;
+    cursor: pointer;
+    opacity: 80%;
+  }
+
+  .section-wrapper-mobile .close-menu svg {
+    width: 2.4rem;
+    height: 2.4rem; 
+  }
+ 
+}

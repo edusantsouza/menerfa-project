@@ -1,0 +1,50 @@
+
+.banner-section {
+  max-width: 100% ;
+}
+
+.banner-image {
+  background: url('/img/banners/banner-1.jpg') no-repeat center center;
+	background-size: auto;
+	padding: 16rem 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  display: block;
+  max-height: 100%;
+  position: relative;
+}
+
+.arrow img {
+  width: 5.2rem;
+}
+
+.arrow{
+  position: absolute;
+  z-index: 111;
+  cursor: pointer;
+  filter: opacity(30%);
+  transition: .5s all;
+}
+
+.arrow:hover{
+  filter: opacity(60%);
+}
+
+.arrow-left{
+  left: 1.8rem;
+  bottom: calc(50% - 2.4rem)
+}
+
+.arrow-right{
+  right: 1.8rem;
+  bottom: calc(50% - 2.4rem)
+}
+
+@media(max-width: 720px){
+  .banner-section {
+    margin-top: 1.2rem;
+  }
+}
