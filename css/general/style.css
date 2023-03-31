@@ -1,10 +1,10 @@
 :root{
   --white: #FFF;
   --black: #252525;
-  --grey:  #53535381;
+  --grey:  #535353;
   --purple: #707BB6;
   --red: #e41e04;
-  --border-card: #6969698c ;
+  --border-card: #696969 ;
   font-size: 62.5%;
 }
 
