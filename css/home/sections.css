@@ -1,10 +1,11 @@
 
+
+
 .sections-options {
   display: flex;
   justify-content: center;
   gap: 8rem;
   padding-block: 1rem;
-  border-bottom: 1px solid #00000027;
   max-width: 90rem;
   margin: 0 auto;
 }

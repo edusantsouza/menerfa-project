@@ -4,7 +4,8 @@
   --grey:  #535353;
   --purple: #707BB6;
   --red: #e41e04;
-  --border-card: #696969 ;
+  --border-card: #696969;
+  --light-border: #6867673f;
   font-size: 62.5%;
 }
 
@@ -20,4 +21,3 @@ body {
   font-weight: 500;
   position: relative;
 }
-
