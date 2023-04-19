@@ -12,18 +12,18 @@
     text-align: center;
     margin-bottom: 5rem;
     font-size: 2.4rem;
-  }
-  
-  .products-section ul {
+  }  
+
+  .cards-list{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    gap: 4rem;
+    justify-content: flex-start;
+    gap: 6rem;
     row-gap: 5rem;
     flex-wrap: wrap;
   } 
   
-  .products-section ul li  {
+  .cards-list li  {
     color: var(--white);
     text-align: center;
   }
@@ -36,6 +36,7 @@
     display: flex;
     flex-direction: column;
     transition: box-shadow .5s;
+    width: 25rem;
   }
   
   .card-image {
@@ -82,7 +83,7 @@
     color: var(--black);
   }
 
-.favorite-icon {
+  .favorite-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +130,7 @@
     fill: var(--white);
   }
   
-  @media(max-width: 950px){
+  @media(max-width: 1250px){
     .card-info p {
       font-size: 1.6rem;
     }
@@ -140,20 +141,27 @@
       border-top-left-radius: 1rem;
       cursor: pointer;
       transition: .6s all;
+      width: 20rem;
+      justify-content: center;
     }
   
     .products-section ul {
       max-width: 80%;
       gap: 2rem;
+      justify-content: center;
     }
   }
   
-  @media(max-width: 815px) {
+  @media(max-width: 850px) {
   
     .products-section ul {
       width: 100%;
-      justify-content: space-between;
+      justify-content: center;
       margin: 0;
+    }
+
+    .card-item{
+      width: 16rem;
     }
   
   }
@@ -161,16 +169,41 @@
   @media(min-width: 300px) and (max-width: 650px){
   
     .products-section ul {
-      max-width: 60%;
+      max-width: 100%;
       flex-direction: row;
-      justify-content: space-between;
       justify-content: center;
-      gap: 6rem;
+      gap:1.8rem;
+      row-gap: 2.4rem;
+    }
+    .card-item{
+      width: 15rem;
+      height: 30rem;
+    }
+     .favorite-icon{
+      width: 3rem;
+      height: 3rem;
+    }
+    .card-info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      padding:0;
+      padding-block: 1.2rem;
+      position: relative;
     }
     .card-info h3 {
-      padding-top: 1rem;
-      font-size: 1.6rem;
+      padding-top: .5rem;
+      font-size: 1.2rem;
     }
-    
+    .card-info p{
+      font-size: 1.4rem;
+    }
+    .card-info span {
+      font-size: .9rem ;
+    }
+    .card-buttons {
+      visibility: hidden;
+    }
   }
   

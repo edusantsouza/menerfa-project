@@ -111,11 +111,54 @@
         cartScreen.style = "top: 0";
       } else if (verifyScreenPosition() < position) {
         if (window.scrollY > 50) {
-          cartScreen.style = "top: 9.4rem";
+          if (window.outerWidth >= 800) {
+            cartScreen.style = "top: 9.3rem";
+          } else if (window.outerWidth >= 721 && window.outerWidth < 800) {
+            cartScreen.style = "top: 10.8rem";
+          } else {
+            cartScreen.style = "top: 8rem";
+          }
         } else {
-          cartScreen.style = "top: 12rem";
+          if (window.outerWidth >= 800) {
+            cartScreen.style = "top: 12.1rem";
+          } else if (window.outerWidth >= 721 && window.outerWidth < 800) {
+            cartScreen.style = "top: 13.5rem";
+          } else {
+            cartScreen.style = "top: 16.5rem";
+          }
         }
       }
+    });
+
+    window.addEventListener("resize", () => {
+      // if (
+      //   window.scrollY > 50 &&
+      //   cartScreen.classList.contains("active-cart" || "active-cart-mobile")
+      // ) {
+      //   if (window.outerWidth >= 800) {
+      //     cartScreen.style = "top: 9.3rem ; left: 30%";
+      //   } else if (window.outerWidth >= 721 && window.outerWidth < 800) {
+      //     cartScreen.style = "top: 11.8rem ; left: 50%";
+      //   } else {
+      //     cartScreen.style = "top: 8rem ; left: 20%;";
+      //   }
+      // } else if (
+      //   window.scrollY < 50 &&
+      //   cartScreen.classList.contains("active-cart" || "active-cart-mobile")
+      // ) {
+      //   if (window.outerWidth > 1000) {
+      //     cartScreen.style = "top: 12.1rem ;  left: 50%;";
+      //   } else if (window.outerWidth >= 800 && window.outerWidth < 1000) {
+      //     cartScreen.style = "top: 13.5rem ;  left: 50%;";
+      //   } else if (window.outerWidth >= 721 && window.outerWidth < 800) {
+      //     cartScreen.style = "top: 13.5rem; left: 50%;";
+      //   } else {
+      //     cartScreen.style = "top: 18.5rem; left: 20%;";
+      //   }
+      // }
+
+      cartScreen.classList.remove("active-cart");
+      cartScreen.classList.remove("active-cart-mobile");
     });
   };
 
@@ -131,7 +174,6 @@
     const openMenu = () => {
       sectionsOptions.style = "left: 0";
       window.screenTop = 0;
-      console.log("oi");
     };
 
     const closeMenu = () => {
@@ -151,6 +193,7 @@
     );
     const goSearch = document.querySelector(".opened-search");
     const goClose = document.querySelector(".close-search");
+
     window.addEventListener("resize", () => {
       if (window.outerWidth > 736) {
         goSearch.style = "display: none";
@@ -186,6 +229,7 @@
 
     cartBtn.addEventListener("click", (e) => {
       e.preventDefault();
+
       cartScreen.classList.toggle("active-cart");
     });
 
