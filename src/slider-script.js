@@ -131,31 +131,23 @@
     });
 
     window.addEventListener("resize", () => {
-      // if (
-      //   window.scrollY > 50 &&
-      //   cartScreen.classList.contains("active-cart" || "active-cart-mobile")
-      // ) {
-      //   if (window.outerWidth >= 800) {
-      //     cartScreen.style = "top: 9.3rem ; left: 30%";
-      //   } else if (window.outerWidth >= 721 && window.outerWidth < 800) {
-      //     cartScreen.style = "top: 11.8rem ; left: 50%";
-      //   } else {
-      //     cartScreen.style = "top: 8rem ; left: 20%;";
-      //   }
-      // } else if (
-      //   window.scrollY < 50 &&
-      //   cartScreen.classList.contains("active-cart" || "active-cart-mobile")
-      // ) {
-      //   if (window.outerWidth > 1000) {
-      //     cartScreen.style = "top: 12.1rem ;  left: 50%;";
-      //   } else if (window.outerWidth >= 800 && window.outerWidth < 1000) {
-      //     cartScreen.style = "top: 13.5rem ;  left: 50%;";
-      //   } else if (window.outerWidth >= 721 && window.outerWidth < 800) {
-      //     cartScreen.style = "top: 13.5rem; left: 50%;";
-      //   } else {
-      //     cartScreen.style = "top: 18.5rem; left: 20%;";
-      //   }
-      // }
+      if (window.scrollY > 50) {
+        if (window.outerWidth >= 800) {
+          cartScreen.style = "top: 9.3rem";
+        } else if (window.outerWidth >= 721 && window.outerWidth < 800) {
+          cartScreen.style = "top: 10.8rem";
+        } else {
+          cartScreen.style = "top: 8rem";
+        }
+      } else {
+        if (window.outerWidth >= 1000) {
+          cartScreen.style = "top: 12.1rem";
+        } else if (window.outerWidth >= 721 && window.outerWidth < 1000) {
+          cartScreen.style = "top: 13.5rem";
+        } else {
+          cartScreen.style = "top: 16.5rem";
+        }
+      }
 
       cartScreen.classList.remove("active-cart");
       cartScreen.classList.remove("active-cart-mobile");
